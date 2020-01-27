@@ -21,14 +21,15 @@ function App() {
 
         <Top></Top>
 
-        <Container className="container-fluid text-center">
-          <Row className="bg-warning content">
-            <Left></Left>
+        <Container fluid>
+          <Row className="bg-warning content"> 
+            <Col md="2">
+              <Left></Left>
+            </Col>
 
-            <Col sm={8} className="text-left">
+            <Col md="8" className="text-left">
               <Card body> 
               <Center></Center>
-
               {/* React Router Start */}
                 <Switch>
                   <Route path="/about">
@@ -42,16 +43,17 @@ function App() {
                   </Route>
                 </Switch>
                 {/* React Router End */}
-
+                
               </Card>
             </Col>
 
-            <Right></Right>      
-          </Row>
-
-          <Footer></Footer>
-
+            <Col md="2">
+              <Right></Right>  
+            </Col>
+          </Row> 
         </Container>
+        
+        <Footer></Footer>
 
     </Router>
   );
