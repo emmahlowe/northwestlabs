@@ -29,7 +29,7 @@ function App() {
 
             <Col md="8" className="text-center">
               <Card body> 
-              <Center></Center>
+              
               {/* React Router Start */}
                 <Switch>
                   <Route path="/about">
@@ -43,7 +43,7 @@ function App() {
                   </Route>
                 </Switch>
                 {/* React Router End */}
-
+                <Center></Center>
               </Card>
             </Col>
 
