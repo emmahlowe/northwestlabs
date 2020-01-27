@@ -22,12 +22,12 @@ function App() {
         <Top></Top>
 
         <Container fluid>
-          <Row className="bg-warning content"> 
-            <Col md="2">
+          <Row className="bg-light content"> 
+            <Col md="2" className="text-center">
               <Left></Left>
             </Col>
 
-            <Col md="8" className="text-left">
+            <Col md="8" className="text-center">
               <Card body> 
               <Center></Center>
               {/* React Router Start */}
@@ -43,11 +43,11 @@ function App() {
                   </Route>
                 </Switch>
                 {/* React Router End */}
-                
+
               </Card>
             </Col>
 
-            <Col md="2">
+            <Col md="2" className="text-center">
               <Right></Right>  
             </Col>
           </Row> 
