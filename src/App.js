@@ -18,12 +18,15 @@ import './App.css';
 function App() {
   return (
       <Router>
-
-        <Top></Top>
-
-        <Container fluid>
-          <Row className="bg-light content"> 
-            <Col md="2" className="text-center">
+        <Container fluid className="d-flex flex-column min-vh-100 p-0">
+          <Row>
+            <Col md="12" className="pr-0">
+            <Top></Top>
+            </Col>
+          </Row>
+        
+          <Row className="content flex-grow-1"> 
+            <Col md="2" className="text-center bg-light">
               <Left></Left>
             </Col>
 
@@ -43,18 +46,16 @@ function App() {
                   </Route>
                 </Switch>
                 {/* React Router End */}
-                <Center></Center>
+                <Center></Center> 
               </Card>
             </Col>
 
-            <Col md="2" className="text-center">
+            <Col md="2" className="text-center bg-light">
               <Right></Right>  
             </Col>
           </Row> 
+          <Footer></Footer>
         </Container>
-        
-        <Footer></Footer>
-
     </Router>
   );
 }
