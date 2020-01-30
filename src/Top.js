@@ -12,12 +12,12 @@ import {
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mr-auto">
-            <NavDropdown title="Log Out" id="collasible-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Log In</NavDropdown.Item>
-                </NavDropdown>
                 <Link className="nav-link" to="/">Home</Link>
                 <Link className="nav-link" to="/about">About</Link>
                 <Link className="nav-link" to="/help">Help</Link>
+                <NavDropdown title="Log Out" id="collasible-nav-dropdown">
+                <NavDropdown.Item href="#action/3.1">Log In</NavDropdown.Item>
+                </NavDropdown>
             </Nav>
             </Navbar.Collapse>
         </Navbar>
