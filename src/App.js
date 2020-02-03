@@ -8,7 +8,6 @@ import {
 import Top from './Top';
 import Help from './Help';
 import About from './About';
-import Home from './Home';
 import Right from './Right';
 import Left from './Left';
 import Center from './Center';
@@ -42,7 +41,7 @@ function App() {
                     <Help />
                   </Route>
                   <Route path="/">
-                    <Home />
+                    <Center />
                   </Route>
                 </Switch>
                 {/* React Router End */}
