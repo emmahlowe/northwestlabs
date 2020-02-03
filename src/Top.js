@@ -1,14 +1,13 @@
 import React from 'react';
-import { Navbar, Nav, NavDropdown, Card} from 'react-bootstrap';
+import { Navbar, Nav, NavDropdown} from 'react-bootstrap';
 import {
-  BrowserRouter as Router,
   Link
 } from "react-router-dom";
 
   const Top = (props) => {
       return (
-        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-            <Navbar.Brand href="#home"><i class="fas fa-flask"></i> Northwest Labs</Navbar.Brand>
+        <Navbar collapseOnSelect expand="lg" className="d-flex text-dark">
+            <Navbar.Brand href="#home"><i className="fas fa-flask"></i> Northwest Labs</Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mr-auto">

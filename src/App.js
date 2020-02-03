@@ -20,17 +20,17 @@ function App() {
       <Router>
         <Container fluid className="d-flex flex-column min-vh-100 p-0">
           <Row>
-            <Col md="12" className="pr-0">
+            <Col md="12" className="pr-0 border">
             <Top></Top>
             </Col>
           </Row>
         
-          <Row className="content flex-grow-1"> 
-            <Col md="2" className="text-center bg-light">
+          <Row className="content flex-grow-1 border"> 
+            <Col md="2" className="text-center border">
               <Left></Left>
             </Col>
 
-            <Col md="8" className="text-center">
+            <Col md="8" className="text-center p-0">
               <Card body> 
               
               {/* React Router Start */}
@@ -50,7 +50,7 @@ function App() {
               </Card>
             </Col>
 
-            <Col md="2" className="text-center bg-light">
+            <Col md="2" className="text-center border">
               <Right></Right>  
             </Col>
           </Row> 
