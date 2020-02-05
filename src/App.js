@@ -12,6 +12,7 @@ import Right from './Right';
 import Left from './Left';
 import Center from './Center';
 import Footer from './Footer';
+import Details from './Details';
 import './App.css';
 
 function App() {
@@ -40,12 +41,14 @@ function App() {
                   <Route path="/help">
                     <Help />
                   </Route>
+                  <Route path="/details/:id">
+                    <Details />
+                  </Route>
                   <Route path="/">
                     <Center />
                   </Route>
                 </Switch>
                 {/* React Router End */}
-                <Center></Center> 
               </Card>
             </Col>
 

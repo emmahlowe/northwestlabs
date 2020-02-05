@@ -1,24 +1,18 @@
 import React from 'react';
 import PRODUCTS from './products';
 import { Col, Card } from 'react-bootstrap';
-
-// const Home = (props) => {
-//   return <p>Home</p>;
-//   }
-// let base = "public\media\products\"
-// {require('/media/products/' + p.filename + '-1.png')} mine
-//'./media/products/apple-1.png'
-// {require(`/media/products/${p.filename}-1.png`)} jacoby
+import {
+  Link
+} from "react-router-dom";
 
 const Products = (props) => (
-  
   <>
     {
     Object.values(PRODUCTS).map((p) => (
-      <Col className="mb-4">
+      <Col className="mb-4" key={p.id.toString()}>
       <Card>
         <div>
-          <a href="#" class="btn btn-dark position-absolute">Details</a>
+          <Link to={`/details/${p.id}`} class="btn btn-dark position-absolute top-right">Details</Link> 
           <Card.Img variant="top" src={'/media/products/' + p.filename + '-1.png'} alt={p.name}/>
         </div>
         <Card.Footer>
