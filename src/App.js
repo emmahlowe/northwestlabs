@@ -12,7 +12,7 @@ import Right from './Right';
 import Left from './Left';
 import Center from './Center';
 import Footer from './Footer';
-import Details from './Details';
+import ProductDetail from './ProductDetail';
 import './App.css';
 
 function App() {
@@ -42,7 +42,7 @@ function App() {
                     <Help />
                   </Route>
                   <Route path="/details/:id">
-                    <Details />
+                    <ProductDetail />
                   </Route>
                   <Route path="/">
                     <Center />

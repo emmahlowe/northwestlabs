@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import { setImage } from 'react';
 
 
-function Details(props) {
+function ProductDetail(props) {
     let {id} = useParams()
     console.log(id)
     const p = PRODUCTS[id]
@@ -67,4 +67,4 @@ function Details(props) {
 }
 
 
-export default Details;
+export default ProductDetail;

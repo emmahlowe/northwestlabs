@@ -7,6 +7,7 @@ import {
 
 const Products = (props) => (
   <>
+  
     {
     Object.values(PRODUCTS).map((p) => (
       <Col className="mb-4" key={p.id.toString()}>

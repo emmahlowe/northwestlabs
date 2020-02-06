@@ -1,18 +1,27 @@
 import React from 'react';
 import { Nav } from 'react-bootstrap';
+import PRODUCTS from './products';
   
-  const Left = (props) => {
+  function Left(props) {
+    
+    const categories = {} //empty dict
+    for (let p of Object.values(PRODUCTS)) {
+      if (p.category in categories) {
+        categories[p.category] += 1 //adds one to the count
+      }
+      else
+        { //creates new dict item with value of 1
+            
+            categories[p.category] = 1
+          }
+        }
+      
       return (
-            <Nav defaultActiveKey="/home" link="black" className="flex-column text-dark">
-                <a className="nav-link" href="/">All Products (146)</a>
-                <a className="nav-link" href="/about">Office (28)</a>
-                <a className="nav-link" href="/about">Clothes (13)</a>
-                <a className="nav-link" href="/help">Food (22)</a>
-                <a className="nav-link" href="/help">Household (66)</a>
-                <a className="nav-link" href="/help">Other (16)</a>
-                <a className="nav-link" href="/help">Ducks (1)</a>
-            </Nav>
-        
+        <Nav defaultActiveKey="/home" link="black" className="flex-column text-dark">
+          {Object.entries(categories).map(([c, count]) => (
+            <a className="nav-link" href="/">{c} ({count})</a>
+          ))}
+        </Nav>
       );
     }
 
