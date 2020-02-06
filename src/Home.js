@@ -12,7 +12,7 @@ const Products = (props) => (
       <Col className="mb-4" key={p.id.toString()}>
       <Card>
         <div>
-          <Link to={`/details/${p.id}`} class="btn btn-dark position-absolute top-right">Details</Link> 
+          <Link to={`/details/${p.id}`} className="btn btn-dark position-absolute top-right">Details</Link> 
           <Card.Img variant="top" src={'/media/products/' + p.filename + '-1.png'} alt={p.name}/>
         </div>
         <Card.Footer>
