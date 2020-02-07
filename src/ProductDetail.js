@@ -46,22 +46,6 @@ function ProductDetail(props) {
             </div>
             
         </div>
-        // <div className="row row-cols-2">
-        //     <div className="text-left col">
-        //         <h1>{p.name}</h1>
-        //         <h1>${p.price}</h1> 
-        //         <p>{p.description}</p>
-        //     </div>
-        //     <div className="float-right col">
-        //         <img variant="top" src={'/media/products/' + p.filename + '-1.png'} alt={p.name} className="img-thumbnail"/>
-        //     </div>
-        //     <div className="float-right col">
-        //         <img variant="top" src={'/media/products/' + p.filename + '-1.png'} alt={p.name} className="img-thumbnail w-25 h-25" style={test} />
-        //         <img variant="top" src={'/media/products/' + p.filename + '-2.png'} alt={p.name} className="img-thumbnail w-25"/>
-        //         <img variant="top" src={'/media/products/' + p.filename + '-3.png'} alt={p.name} className="img-thumbnail w-25"/>
-        //         <img variant="top" src={'/media/products/' + p.filename + '-4.png'} alt={p.name} className="img-thumbnail w-25"/>
-        //     </div>
-        // </div>
     )
     
 }

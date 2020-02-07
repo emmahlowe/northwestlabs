@@ -47,6 +47,9 @@ function App() {
                   <Route path="/">
                     <Center />
                   </Route>
+                  <Route path="/:c">
+                    <Center />
+                  </Route>
                 </Switch>
                 {/* React Router End */}
               </Card>
