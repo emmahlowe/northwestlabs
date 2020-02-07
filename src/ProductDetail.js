@@ -1,14 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PRODUCTS from './products';
 import { useParams } from 'react-router-dom';
 import { setImage } from 'react';
 
 
 function ProductDetail(props) {
+    const [count, setCount] = useState(1);
     let {id} = useParams()
     console.log(id)
     const p = PRODUCTS[id]
-    //const count = useState(1)
     if (!p)
     {
         return (
@@ -19,7 +19,7 @@ function ProductDetail(props) {
         <div className="m-4">
             <div className="float-right border rounded m-2 p-2" style={{ width: '300px', height: '300px', }}>
             
-            <img variant="top" src={'/media/products/' + p.filename + '-1.png'} alt={p.name} className="w-100"/>    
+            <img variant="top" src={'/media/products/' + p.filename + '-' + count + '.png'} alt={p.name} className="w-100"/>    
             <div>
                 {["1", "2", "3", "4"].map(img_idx => (
                     <img 
@@ -31,9 +31,8 @@ function ProductDetail(props) {
                             height: "30px",
                             width: "30px",
                         }}
-                        onMouseEnter={e => {
-                            //useState(2)
-                            setImage(img_idx);
+                        onMouseEnter={() => {
+                            setCount(img_idx)
                         }}
                     />
                 ))}

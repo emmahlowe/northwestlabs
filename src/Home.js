@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PRODUCTS from './products';
 import { useRouteMatch } from 'react-router-dom';
 import { Col, Card } from 'react-bootstrap';
@@ -6,9 +6,13 @@ import {
   Link
 } from "react-router-dom";
 
+
 function Products(props) {
+  
   let match_category = useRouteMatch('/category/:category');
-  // let match_product = useRouteMatch(“/id/:id”);
+  const customStyles = {
+    left: '0px'
+  }
   return (
     <>
       {Object.values(PRODUCTS)
@@ -26,7 +30,7 @@ function Products(props) {
         <Col className="mb-4" key={p.id.toString()}>
           <Card>
             <div>
-              <Link to={`/details/${p.id}`} className="btn btn-dark position-absolute top-right">Details</Link>
+              <Link to={`/details/${p.id}`} style={customStyles} className="btn btn-dark position-absolute top-right">Details</Link>
               <Card.Img variant="top" src={'/media/products/' + p.filename + '-1.png'} alt={p.name} />
             </div>
             <Card.Footer>
@@ -40,7 +44,6 @@ function Products(props) {
     </>
     
   )
-
 
 }
 

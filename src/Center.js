@@ -9,7 +9,7 @@ import Home from './Home.js'
           
          <Home></Home> 
             
-      </CardDeck>
+        </CardDeck>
         </>
       );
     }
