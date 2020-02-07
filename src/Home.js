@@ -7,23 +7,20 @@ import {
 } from "react-router-dom";
 
 function Products(props) {
-  let match_category = useRouteMatch("/category/:c");
-  
+  let match_category = useRouteMatch('/category/:category');
+  // let match_product = useRouteMatch(“/id/:id”);
   return (
     <>
-    {Object.values(PRODUCTS)
-    .filter(p => {
-       if (match_category === p.category)
-      {
-        console.log(match_category + p)
-        return p.category === match_category.params.category;
-      }
-      else 
-      {
-        console.log(match_category)
-        return true;
-      } 
-    })
+      {Object.values(PRODUCTS)
+        .filter(val => {
+          // console.log(match_product.params.id);
+          if (match_category) {
+            return val.category === match_category.params.category;
+          } else {
+            console.log(match_category);
+            return true;
+          }
+        })
     .map(p => {
       return(
    

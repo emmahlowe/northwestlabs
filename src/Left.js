@@ -18,6 +18,7 @@ function Left(props) {
 
   return (
     <Nav defaultActiveKey="/home" link="black" className="flex-column text-dark">
+      <Link to={"/"} className="nav-link">All Products ({Object.values(PRODUCTS).length})</Link>
       {Object.entries(categories).map(([c, count]) => (
         // <a className="nav-link" href="/">{c} ({count})</a>
         <Link to={"/category/" + c} className="nav-link">{c} ({count})</Link>
