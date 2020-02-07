@@ -13,7 +13,6 @@ function Products(props) {
     <>
       {Object.values(PRODUCTS)
         .filter(val => {
-          // console.log(match_product.params.id);
           if (match_category) {
             return val.category === match_category.params.category;
           } else {
