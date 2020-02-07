@@ -1,32 +1,31 @@
 import React from 'react';
 import PRODUCTS from './products';
-import { useParams } from 'react-router-dom';
+import { useRouteMatch } from 'react-router-dom';
 import { Col, Card } from 'react-bootstrap';
 import {
   Link
 } from "react-router-dom";
 
 function Products(props) {
-  let { c } = useParams()
+  let match_category = useRouteMatch("/category/:c");
   
-  
- 
   return (
     <>
     {Object.values(PRODUCTS)
     .filter(p => {
-       if (p.category == c)
+       if (match_category === p.category)
       {
-        console.log(c, p.category)
-        return p.category === c//add a card
+        console.log(match_category + p)
+        return p.category === match_category.params.category;
       }
-      else if (null == c)
+      else 
       {
+        console.log(match_category)
         return true;
       } 
     })
-    .map((p) => (
-
+    .map(p => {
+      return(
    
         <Col className="mb-4" key={p.id.toString()}>
           <Card>
@@ -40,7 +39,8 @@ function Products(props) {
             </Card.Footer>
           </Card>
         </Col>
-      ))}
+      );
+     })}
     </>
     
   )

@@ -8,9 +8,6 @@ import Home from './Home.js'
         <Row>
         <CardDeck className="row-cols-4">
           
-         {/* const printP = "My products are: " + PRODUCTS.map((p, i) => {
-           console.log(p)
-         }) */}
          <Home></Home> 
             
       </CardDeck>
