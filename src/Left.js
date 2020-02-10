@@ -21,7 +21,7 @@ function Left(props) {
       <Link to={"/"} className="nav-link">All Products ({Object.values(PRODUCTS).length})</Link>
       {Object.entries(categories).map(([c, count]) => (
         // <a className="nav-link" href="/">{c} ({count})</a>
-        <Link to={"/category/" + c} className="nav-link">{c} ({count})</Link>
+        <Link to={"/category/" + c} key={c} className="nav-link">{c} ({count})</Link>
       ))}
     </Nav>
   );

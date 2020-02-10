@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import PRODUCTS from './products';
 import { useParams } from 'react-router-dom';
-import { setImage } from 'react';
 
 
 function ProductDetail(props) {

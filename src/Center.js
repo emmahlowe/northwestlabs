@@ -1,5 +1,5 @@
 import React from 'react';
-import { CardDeck, Row } from 'react-bootstrap';
+import { CardDeck } from 'react-bootstrap';
 import Home from './Home.js'
 
   const Center = (props) => {

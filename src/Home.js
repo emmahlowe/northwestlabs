@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PRODUCTS from './products';
 import { useRouteMatch } from 'react-router-dom';
 import { Col, Card } from 'react-bootstrap';
@@ -20,7 +20,6 @@ function Products(props) {
           if (match_category) {
             return val.category === match_category.params.category;
           } else {
-            console.log(match_category);
             return true;
           }
         })
