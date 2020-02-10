@@ -8,11 +8,11 @@ import {
 import Top from './Top';
 import Help from './Help';
 import About from './About';
-import Home from './Home';
 import Right from './Right';
 import Left from './Left';
 import Center from './Center';
 import Footer from './Footer';
+import ProductDetail from './ProductDetail';
 import './App.css';
 
 function App() {
@@ -20,17 +20,17 @@ function App() {
       <Router>
         <Container fluid className="d-flex flex-column min-vh-100 p-0">
           <Row>
-            <Col md="12" className="pr-0">
+            <Col md="12" className="pr-0 border">
             <Top></Top>
             </Col>
           </Row>
         
-          <Row className="content flex-grow-1"> 
-            <Col md="2" className="text-center bg-light">
+          <Row className="content flex-grow-1 border"> 
+            <Col md="2" className="text-center border">
               <Left></Left>
             </Col>
 
-            <Col md="8" className="text-center">
+            <Col md="8" className="text-center p-0">
               <Card body> 
               
               {/* React Router Start */}
@@ -41,16 +41,18 @@ function App() {
                   <Route path="/help">
                     <Help />
                   </Route>
+                  <Route path="/details/:id">
+                    <ProductDetail />
+                  </Route>
                   <Route path="/">
-                    <Home />
+                    <Center />
                   </Route>
                 </Switch>
                 {/* React Router End */}
-                <Center></Center> 
               </Card>
             </Col>
 
-            <Col md="2" className="text-center bg-light">
+            <Col md="2" className="text-center border">
               <Right></Right>  
             </Col>
           </Row> 

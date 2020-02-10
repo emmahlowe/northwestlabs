@@ -1,19 +1,29 @@
 import React from 'react';
-import { Col, Nav } from 'react-bootstrap';
+import { Nav } from 'react-bootstrap';
+import PRODUCTS from './products';
 import {
-    BrowserRouter as Router,
-    Link
-  } from "react-router-dom";
-  
-  const Left = (props) => {
-      return (
-            <Nav defaultActiveKey="/home" className="flex-column">
-                <Link className="nav-link" to="/">Home</Link>
-                <Link className="nav-link" to="/about">About</Link>
-                <Link className="nav-link" to="/help">Help</Link>
-            </Nav>
-        
-      );
-    }
+  Link
+} from "react-router-dom";
 
-    export default Left;
+function Left(props) {
+  const categories = {} //empty dict
+  for (let p of Object.values(PRODUCTS)) {
+    if (p.category in categories) {
+      categories[p.category] += 1 //adds one to the count
+    }
+    else { //creates new dict item with value of 1
+      categories[p.category] = 1
+    }
+  }
+
+  return (
+    <Nav defaultActiveKey="/home" link="black" className="flex-column text-dark">
+      <Link to={"/"} className="nav-link">All Products ({Object.values(PRODUCTS).length})</Link>
+      {Object.entries(categories).map(([c, count]) => (
+        // <a className="nav-link" href="/">{c} ({count})</a>
+        <Link to={"/category/" + c} key={c} className="nav-link">{c} ({count})</Link>
+      ))}
+    </Nav>
+  );
+}
+export default Left;
