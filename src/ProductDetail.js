@@ -1,13 +1,16 @@
 import React, { useState } from 'react';
-import PRODUCTS from './products';
+// import PRODUCTS from './products';
+import AppContext from "./context"
 import { useParams } from 'react-router-dom';
 
 
 function ProductDetail(props) {
+    const context = React.useContext(AppContext);
+
     const [count, setCount] = useState(1);
     let {id} = useParams()
-    console.log(id)
-    const p = PRODUCTS[id]
+    // console.log(id)
+    const p = context.products.find(x => x.id == id)//PRODUCTS[id]
     if (!p)
     {
         return (
