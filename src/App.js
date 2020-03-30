@@ -10,8 +10,11 @@ import Help from './Help';
 import About from './About';
 import Right from './Right';
 import Left from './Left';
+import Receipt from './Receipt';
 import Center from './Center';
 import Footer from './Footer';
+import CheckoutStarter from './checkout-starter';
+import ShoppingCart from './ShoppingCart';
 import ProductDetail from './ProductDetail';
 import './App.css';
 
@@ -40,6 +43,15 @@ function App() {
                   </Route>
                   <Route path="/help">
                     <Help />
+                  </Route>
+                  <Route path="/receipt">
+                    <Receipt />
+                  </Route>
+                  <Route path="/cart">
+                    <ShoppingCart />
+                  </Route>
+                  <Route path="/checkout">
+                    <CheckoutStarter />
                   </Route>
                   <Route path="/details/:id">
                     <ProductDetail />
